@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-portal" id="portal-tap-zone">
+        <video autoplay loop muted playsinline class="bg-video active" id="video-a">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-rain-falling-on-a-window-at-night-41551-large.mp4" type="video/mp4">
+        </video>
+        <video loop muted playsinline class="bg-video" id="video-b">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-rain-falling-on-a-window-at-night-41551-large.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="vignette"></div>
+
+    <div id="mobile-ui" class="visible">
+        <div class="bottom-sheet">
+            <div class="handle"></div>
+            
+            <div class="sheet-content">
+                <h3>Atmosphere Deck</h3>
+                <p class="subtitle">Tap empty space to enter your daydream. Tap again to return.</p>
+                
+                <div class="mixer-section">
+                    <div class="slider-row">
+                        <label>Rain Overlay</label>
+                        <input type="range" id="slider-rain" min="0" max="100" value="50">
+                    </div>
+                    <div class="slider-row">
+                        <label>Subway Hum</label>
+                        <input type="range" id="slider-hum" min="0" max="100" value="0">
+                    </div>
+                </div>
+
+                <div class="scene-section">
+                    <span class="section-label">Select Vibe</span>
+                    <div class="scene-grid">
+                        <button class="scene-btn active" data-video="https://assets.mixkit.co/videos/preview/mixkit-rain-falling-on-a-window-at-night-41551-large.mp4">Night Rain</button>
+                        <button class="scene-btn" data-video="https://assets.mixkit.co/videos/preview/mixkit-driving-in-a-dark-tunnel-42023-large.mp4">Late Transit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-rain" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="audio-hum" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
