@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-portal" id="portal-tap-zone">
+        <video autoplay loop muted playsinline class="bg-video active" id="video-a">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+        <video loop muted playsinline class="bg-video" id="video-b">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="vignette"></div>
+
+    <div id="mobile-ui" class="visible">
+        <div class="bottom-sheet">
+            <div class="handle"></div>
+            
+            <div class="sheet-content">
+                <h3>Atmosphere Deck</h3>
+                <p class="subtitle">Tap background to hide menu. Tap again to reveal parameters.</p>
+                
+                <div class="mixer-section">
+                    <div class="slider-row">
+                        <label>Ambient Stream 1</label>
+                        <input type="range" id="slider-rain" min="0" max="100" value="50">
+                    </div>
+                    <div class="slider-row">
+                        <label>Ambient Stream 2</label>
+                        <input type="range" id="slider-hum" min="0" max="100" value="0">
+                    </div>
+                </div>
+
+                <div class="scene-section">
+                    <span class="section-label">Select Vibe</span>
+                    <div class="scene-grid">
+                        <button class="scene-btn active" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">Scene Alpha</button>
+                        <button class="scene-btn" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Scene Beta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-rain" loop src="https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg"></audio>
+    <audio id="audio-hum" loop src="https://actions.google.com/sounds/v1/ambiences/ambient_hum_air_conditioner.ogg"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
